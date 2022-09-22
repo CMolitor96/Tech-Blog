@@ -6,15 +6,15 @@ const Blog = require('./blog');
 const User = require('./user');
 
 Blog.hasMany(Comment, {
-    foreignKey: 'id',
+    foreignKey: 'comment_body',
 });
 
 User.hasMany(Blog, {
-    foreignKey: 'id',
+    foreignKey: 'name',
 });
 
 User.hasMany(Comment, {
-    foreignKey: 'id',
+    foreignKey: 'name',
 });
 
 module.exports = { Comment, Blog, User };

@@ -29,14 +29,14 @@ Blog.init(
             type: DataTypes.STRING,
             references: {
                 model: 'user',
-                key: 'id',
+                key: 'name',
             },
         },
         blog_comments: {
             type: DataTypes.STRING,
             references: {
-                model: 'user',
-                key: 'id',
+                model: 'comment',
+                key: 'comment_body',
             },
         },
     },
